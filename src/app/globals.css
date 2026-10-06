@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap');
+
+/* ── Dark theme (default) ── */
+:root {
+  --c-background:                #0d141d;
+  --c-surface:                   #0d141d;
+  --c-surface-dim:               #0d141d;
+  --c-surface-container-lowest:  #080f17;
+  --c-surface-container-low:     #151c25;
+  --c-surface-container:         #192029;
+  --c-surface-container-high:    #232a34;
+  --c-surface-container-highest: #2e353f;
+  --c-surface-variant:           #2e353f;
+  --c-surface-bright:            #333a44;
+  --c-surface-tint:              #9dd852;
+  --c-on-surface:                #dce3f0;
+  --c-on-surface-variant:        #c2c9b3;
+  --c-on-background:             #dce3f0;
+  --c-primary:                   #fcfff0;
+  --c-primary-container:         #b6f36a;
+  --c-primary-fixed:             #b8f56b;
+  --c-primary-fixed-dim:         #9dd852;
+  --c-on-primary:                #1f3700;
+  --c-on-primary-fixed:          #102000;
+  --c-on-primary-fixed-variant:  #2f4f00;
+  --c-on-primary-container:      #446f00;
+  --c-inverse-primary:           #406900;
+  --c-secondary:                 #bdc7d9;
+  --c-secondary-container:       #404a59;
+  --c-secondary-fixed:           #d9e3f6;
+  --c-secondary-fixed-dim:       #bdc7d9;
+  --c-on-secondary:              #27313f;
+  --c-on-secondary-fixed:        #121c2a;
+  --c-on-secondary-container:    #afb9cb;
+  --c-tertiary:                  #fffdff;
+  --c-outline:                   #8c937f;
+  --c-outline-variant:           #424938;
+  --c-error:                     #ffb4ab;
+  --c-error-container:           #93000a;
+  --c-on-error:                  #690005;
+  --c-on-error-container:        #ffdad6;
+  --c-inverse-surface:           #dce3f0;
+  --c-inverse-on-surface:        #2a313b;
+  --c-scrollbar-track:           #151c25;
+  --c-scrollbar-thumb:           #374151;
+}
+
+/* ── Light theme ── */
+html.light {
+  --c-background:                #f3f7ee;
+  --c-surface:                   #ffffff;
+  --c-surface-dim:               #d8e4cc;
+  --c-surface-container-lowest:  #ffffff;
+  --c-surface-container-low:     #f0f6e8;
+  --c-surface-container:         #e9f2de;
+  --c-surface-container-high:    #e2ecD6;
+  --c-surface-container-highest: #dae5cb;
+  --c-surface-variant:           #dde7cf;
+  --c-surface-bright:            #f6fbee;
+  --c-surface-tint:              #406900;
+  --c-on-surface:                #1a1e14;
+  --c-on-surface-variant:        #44523a;
+  --c-on-background:             #1a1e14;
+  --c-primary:                   #1a1e14;
+  --c-primary-container:         #3a6900;
+  --c-primary-fixed:             #4c8800;
+  --c-primary-fixed-dim:         #406900;
+  --c-on-primary:                #ffffff;
+  --c-on-primary-fixed:          #ffffff;
+  --c-on-primary-fixed-variant:  #f0fff0;
+  --c-on-primary-container:      #b6f36a;
+  --c-inverse-primary:           #9dd852;
+  --c-secondary:                 #52607a;
+  --c-secondary-container:       #d6e3f8;
+  --c-secondary-fixed:           #d6e3f8;
+  --c-secondary-fixed-dim:       #b9c8e0;
+  --c-on-secondary:              #ffffff;
+  --c-on-secondary-fixed:        #0e1d2c;
+  --c-on-secondary-container:    #0e1d2c;
+  --c-tertiary:                  #1a1e14;
+  --c-outline:                   #73796b;
+  --c-outline-variant:           #c2cdb5;
+  --c-error:                     #ba1a1a;
+  --c-error-container:           #ffdad6;
+  --c-on-error:                  #ffffff;
+  --c-on-error-container:        #410002;
+  --c-inverse-surface:           #2e3228;
+  --c-inverse-on-surface:        #f0f2ea;
+  --c-scrollbar-track:           #e2ecD6;
+  --c-scrollbar-thumb:           #b0c49a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  background-color: var(--c-background);
+  color: var(--c-on-surface);
+  direction: rtl;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
+
+.custom-scrollbar::-webkit-scrollbar { width: 4px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: var(--c-scrollbar-track); }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: var(--c-scrollbar-thumb); border-radius: 2px; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
